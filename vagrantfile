@@ -69,7 +69,7 @@ Vagrant.configure('2') do |config|
       worker.vm.provision "shell", inline: $install_docker_script, privileged: true
       worker.vm.provision "shell", inline: $worker_script, privileged: true
       worker.vm.provider "virtualbox" do |vb|
-        vb.name = "worker1"
+        vb.name = "worker01"
         vb.memory = "2048"
       end
     end
