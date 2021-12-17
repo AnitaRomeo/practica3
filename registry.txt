@@ -30,6 +30,7 @@ docker tag mikesir87/cats:latest registry.pps.local:5000/michis:2
 
 
 docker image push registry.pps.local:5000/michis:1
+docker image push registry.pps.local:5000/michis:2
 
 
 docker service create --publish 80:8080 --name michis --constraint 'node.hostname==worker02' --replicas 1 registry.pps.local:5000/michis:latest
